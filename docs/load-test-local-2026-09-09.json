@@ -1,0 +1,10 @@
+{
+  "students": 1000,
+  "concurrency": 25,
+  "exam_mode": true,
+  "requests": 4000,
+  "failed_students": 0,
+  "p50_ms": 1683.4968999999983,
+  "p95_ms": 2536.983,
+  "failures": []
+}

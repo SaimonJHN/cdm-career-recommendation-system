@@ -1,0 +1,1 @@
+JSON.stringify({visibility:document.visibilityState,focus:document.hasFocus(),error:window.captureError,w:innerWidth,scroll:document.body.scrollWidth,resources:performance.getEntriesByType('resource').filter(x=>x.name.includes('figma')).map(x=>x.name.slice(0,100))})

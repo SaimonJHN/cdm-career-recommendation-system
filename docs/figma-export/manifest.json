@@ -1,0 +1,338 @@
+{
+  "fileKey": "KER289R4BRzoLebNQXf3AP",
+  "guide": "60:2",
+  "screens": [
+    {
+      "name": "Public — Landing page",
+      "node": "2:2"
+    },
+    {
+      "name": "Student Login",
+      "path": "/login",
+      "state": "login",
+      "id": "5cfe4f8c-f99d-4497-8b52-9df531752f2b",
+      "node": "7:2"
+    },
+    {
+      "name": "Registration",
+      "path": "/register",
+      "state": "register",
+      "id": "02bbc889-41c3-4c6f-b9d7-8402c0867a6c",
+      "node": "8:2"
+    },
+    {
+      "name": "Forgot password",
+      "path": "/forgot-password",
+      "state": "forgot",
+      "id": "28a8a9e5-7b6f-4242-b756-765309352d2f",
+      "node": "9:2"
+    },
+    {
+      "name": "Reset password",
+      "path": "/reset-password?token=sample&email=student@example.invalid",
+      "state": "reset",
+      "id": "bb455b74-a826-4917-bc2c-a28a45747d7f",
+      "node": "10:2"
+    },
+    {
+      "name": "Dashboard — before exam",
+      "path": "/dashboard",
+      "state": "before",
+      "id": "632509b2-d57d-42ae-ac72-a1ea8e0f8a88",
+      "node": "11:2"
+    },
+    {
+      "name": "Dashboard — passed",
+      "path": "/dashboard",
+      "state": "passed",
+      "id": "274e44ff-a359-4f9b-8b2d-e588fd897687",
+      "node": "12:2"
+    },
+    {
+      "name": "Student Profile",
+      "path": "/profile",
+      "state": "passed",
+      "id": "2b9d9c99-5ba1-41e6-9bd8-a87714291448",
+      "node": "13:2"
+    },
+    {
+      "name": "Exam instructions",
+      "path": "/exam",
+      "state": "instructions",
+      "id": "e771906d-eab6-469b-b0b0-59434bbcb62e",
+      "node": "19:2"
+    },
+    {
+      "name": "Exam in progress",
+      "path": "/exam",
+      "state": "active",
+      "id": "28a47d86-ebc0-4ba3-af42-05480fa1271d",
+      "node": "20:2"
+    },
+    {
+      "name": "Exam completed",
+      "path": "/exam",
+      "state": "completed",
+      "id": "950ce143-01a2-41f7-961a-bf948fc2b861",
+      "node": "22:2"
+    },
+    {
+      "name": "Results pending",
+      "path": "/results",
+      "state": "pending",
+      "id": "6abb78a4-e75b-4576-85a1-bb1980584b7b",
+      "node": "23:2"
+    },
+    {
+      "name": "Results retake",
+      "path": "/results",
+      "state": "retake",
+      "id": "8440121a-cdbb-414b-ad59-977b5427138a",
+      "node": "24:2"
+    },
+    {
+      "name": "Results failed",
+      "path": "/results",
+      "state": "failed",
+      "id": "069e916f-4527-4f6b-bbff-9c5726856818",
+      "node": "25:2"
+    },
+    {
+      "name": "Results passed",
+      "path": "/results",
+      "state": "passed",
+      "id": "43f61ba9-07df-4103-8003-d226dfe8402c",
+      "node": "26:2"
+    },
+    {
+      "name": "Recommendation — locked",
+      "path": "/recommendation",
+      "state": "before",
+      "id": "8ac01ed9-8dbc-4d25-9f79-ebaf5baca085",
+      "node": "27:2"
+    },
+    {
+      "name": "Recommendation — ratings",
+      "path": "/recommendation",
+      "state": "ratings",
+      "id": "37bd6828-8eb1-4e62-b684-62b3eb00a844",
+      "node": "28:2"
+    },
+    {
+      "name": "Recommendation — generated",
+      "path": "/recommendation",
+      "state": "generated",
+      "id": "dcb79612-f1b0-45f0-abb2-b63385210619",
+      "node": "43:2"
+    },
+    {
+      "name": "Programs and careers",
+      "path": "/programs",
+      "state": "programs",
+      "id": "fced06dc-7bb6-4a56-834e-0c1bea233df8",
+      "node": "29:2"
+    },
+    {
+      "name": "Install mobile app",
+      "path": "/download-app",
+      "state": "download",
+      "id": "eafc2553-c474-4248-ac30-b73fce6c40ce",
+      "node": "30:2"
+    },
+    {
+      "name": "Admin Login",
+      "path": "/login",
+      "state": "login",
+      "id": "f59e7e38-5980-4b70-b828-5a7375f1831e",
+      "node": "14:2"
+    },
+    {
+      "name": "Admin Dashboard",
+      "path": "/",
+      "state": "dashboard",
+      "id": "09bc0326-c8bf-4fd3-9624-dba4bd4ee30e",
+      "node": "15:2"
+    },
+    {
+      "name": "Students",
+      "path": "/students",
+      "state": "students",
+      "id": "e55fc65e-7c92-4844-b6fc-88ba244bb87a",
+      "node": "16:2"
+    },
+    {
+      "name": "Student details",
+      "path": "/students",
+      "state": "student-detail",
+      "id": "d57cd470-3edd-4443-b6c4-82d1600017a5",
+      "node": "17:2"
+    },
+    {
+      "name": "Student Logs",
+      "path": "/student-logs",
+      "state": "logs",
+      "id": "cec2b333-43e9-4c7f-9e1e-eaecba4f442d",
+      "node": "31:2"
+    },
+    {
+      "name": "Manage Programs",
+      "path": "/programs",
+      "state": "programs",
+      "id": "625e925f-f5f1-438e-bb7e-aaee77a9b057",
+      "node": "32:2"
+    },
+    {
+      "name": "Edit Program",
+      "path": "/programs",
+      "state": "program-edit",
+      "id": "737d63ad-bde3-4d45-95a2-56b3c6117f88",
+      "node": "33:2"
+    },
+    {
+      "name": "Question Bank",
+      "path": "/questions",
+      "state": "questions",
+      "id": "fbcdb3dc-b3d0-40b6-8313-5e6b521a7f4b",
+      "node": "34:2"
+    },
+    {
+      "name": "Edit Question",
+      "path": "/questions",
+      "state": "question-edit",
+      "id": "323338ed-a156-4457-8088-ac6b5284f4f7",
+      "node": "35:2"
+    },
+    {
+      "name": "Results Management",
+      "path": "/results",
+      "state": "results",
+      "id": "4aa83603-dd39-4798-9837-7d8c5a7ad003",
+      "node": "36:2"
+    },
+    {
+      "name": "Registrar Decision",
+      "path": "/results",
+      "state": "decision",
+      "id": "806b8337-da84-4b68-8d36-011cd1005d0d",
+      "node": "37:2"
+    },
+    {
+      "name": "Import Preview",
+      "path": "/results",
+      "state": "import",
+      "id": "a6831fc7-6a98-4663-9d45-5db70ee62e80",
+      "node": "38:2"
+    },
+    {
+      "name": "Administrators",
+      "path": "/administrators",
+      "state": "admins",
+      "id": "e0a9f7e8-e968-4714-aa86-7ffbe03d7f14",
+      "node": "39:2"
+    },
+    {
+      "name": "Invite Administrator",
+      "path": "/administrators",
+      "state": "invite",
+      "id": "5979205c-408e-4e55-93e9-e59f4e1d253a",
+      "node": "40:2"
+    },
+    {
+      "name": "Activity Logs",
+      "path": "/activity",
+      "state": "activity",
+      "id": "d02a9bd9-2541-45f4-b07b-a7b95ae30a89",
+      "node": "41:2"
+    },
+    {
+      "name": "System Health",
+      "path": "/operations",
+      "state": "health",
+      "id": "3570537f-9026-4dab-b424-c8979d863ade",
+      "node": "42:2"
+    },
+    {
+      "name": "Mobile — Student Login",
+      "path": "/login",
+      "state": "login",
+      "id": "577de354-8eb0-49dc-bad9-dd0aee2bd0b2",
+      "node": "44:2"
+    },
+    {
+      "name": "Mobile — Registration",
+      "path": "/register",
+      "state": "register",
+      "id": "b4ad35ac-558c-490e-a296-48541f105e23",
+      "node": "45:2"
+    },
+    {
+      "name": "Mobile — Dashboard — before exam",
+      "path": "/dashboard",
+      "state": "before",
+      "id": "3f9c8539-e855-486b-b160-3eb51cae0cb6",
+      "node": "46:2"
+    },
+    {
+      "name": "Mobile — Dashboard — passed",
+      "path": "/dashboard",
+      "state": "passed",
+      "id": "e1e6f13c-7952-440b-ac31-520a745afce7",
+      "node": "47:2"
+    },
+    {
+      "name": "Mobile — Student Profile",
+      "path": "/profile",
+      "state": "passed",
+      "id": "972d5d17-0741-4abc-a19d-46c2b2babc2e",
+      "node": "48:2"
+    },
+    {
+      "name": "Mobile — Exam in progress",
+      "path": "/exam",
+      "state": "active",
+      "id": "1c7783db-7c4d-4455-b5ca-35ba0c553da0",
+      "node": "49:2"
+    },
+    {
+      "name": "Mobile — Results passed",
+      "path": "/results",
+      "state": "passed",
+      "id": "8a7d992a-9979-4008-8a90-70f1b4900558",
+      "node": "50:2"
+    },
+    {
+      "name": "Mobile — Recommendation — locked",
+      "path": "/recommendation",
+      "state": "before",
+      "id": "0ebdfe27-4852-4456-aad3-76188b18bcb0",
+      "node": "51:2"
+    },
+    {
+      "name": "Mobile — Recommendation — generated",
+      "path": "/recommendation",
+      "state": "generated",
+      "id": "99bfd609-2a25-4817-9d22-399ddc26f53a",
+      "node": "56:2"
+    },
+    {
+      "name": "Mobile — Programs and careers",
+      "path": "/programs",
+      "state": "programs",
+      "id": "43f66f33-cb27-4736-ae93-daaa29aeab19",
+      "node": "52:2"
+    },
+    {
+      "name": "Mobile — Install mobile app",
+      "path": "/download-app",
+      "state": "download",
+      "id": "0a2fe624-1800-49f9-bde8-9d3e1848fb07",
+      "node": "53:2"
+    }
+  ],
+  "pendingMobileInstructions": {
+    "name": "Mobile — Exam instructions",
+    "path": "/exam",
+    "state": "instructions",
+    "id": "3e09c338-cf5a-4e61-871c-dbdb824a9c0d"
+  }
+}
