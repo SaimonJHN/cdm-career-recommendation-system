@@ -95,7 +95,7 @@ See [`docs/ADMIN_SETUP.md`](docs/ADMIN_SETUP.md) for migration, first-admin invi
 
 ### Authentication
 - `POST /api/auth/register` - Register new student
-- `POST /api/auth/login` - Login with PNM account
+- `POST /api/auth/login` - Login with Google account
 - `POST /api/auth/google` - Google OAuth login
 - `POST /api/auth/logout` - Logout
 
