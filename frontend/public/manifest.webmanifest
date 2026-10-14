@@ -2,8 +2,8 @@
   "name": "Colegio de Montalban Career Recommendation System",
   "short_name": "CDM Career",
   "description": "Admissions, entrance assessment, and personalized program guidance for Colegio de Montalban students.",
-  "start_url": "/?source=installed-app",
-  "scope": "/",
+  "start_url": "/cdm-career-recommendation-system/#/?source=installed-app",
+  "scope": "/cdm-career-recommendation-system/",
   "display": "standalone",
   "orientation": "portrait-primary",
   "background_color": "#faf8f3",
@@ -11,8 +11,14 @@
   "categories": ["education", "productivity"],
   "icons": [
     {
-      "src": "/The_Colegio_de_Montalban_Seal.png",
-      "sizes": "315x316",
+      "src": "/cdm-career-recommendation-system/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/cdm-career-recommendation-system/icon-512.png",
+      "sizes": "512x512",
       "type": "image/png",
       "purpose": "any"
     }
@@ -21,12 +27,12 @@
     {
       "name": "Student dashboard",
       "short_name": "Dashboard",
-      "url": "/dashboard"
+      "url": "/cdm-career-recommendation-system/#/dashboard"
     },
     {
       "name": "Academic programs",
       "short_name": "Programs",
-      "url": "/programs"
+      "url": "/cdm-career-recommendation-system/#/programs"
     }
   ]
 }

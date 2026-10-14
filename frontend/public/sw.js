@@ -1,6 +1,6 @@
-const CACHE_NAME = 'cdm-career-shell-v3';
+const CACHE_NAME = 'cdm-career-shell-v4';
 const BASE_PATH = new URL('./', self.registration.scope).pathname;
-const APP_SHELL = [BASE_PATH, `${BASE_PATH}manifest.webmanifest`, `${BASE_PATH}The_Colegio_de_Montalban_Seal.png`];
+const APP_SHELL = [BASE_PATH, `${BASE_PATH}manifest.webmanifest`, `${BASE_PATH}The_Colegio_de_Montalban_Seal.png`, `${BASE_PATH}icon-192.png`, `${BASE_PATH}icon-512.png`];
 
 self.addEventListener('install', (event) => {
   event.waitUntil(caches.open(CACHE_NAME).then((cache) => cache.addAll(APP_SHELL)));
@@ -38,7 +38,7 @@ self.addEventListener('fetch', (event) => {
 
   // App code and styles must be network-first so a newly deployed UI never
   // runs with JavaScript from one release and CSS from an older release.
-  if (request.destination === 'script' || request.destination === 'style') {
+  if (request.destination === 'script' || request.destination === 'style' || url.pathname === `${BASE_PATH}manifest.webmanifest`) {
     event.respondWith(
       fetch(request)
         .then((response) => {
