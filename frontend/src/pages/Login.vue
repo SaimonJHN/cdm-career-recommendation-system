@@ -1,5 +1,5 @@
 <template>
-  <div class="min-h-screen flex" style="background-color: var(--color-school-cream); border-left: 1.5px solid var(--color-school-green);">
+  <div class="login-page flex" style="background-color: var(--color-school-cream);">
     <!-- Left decorative panel -->
     <div class="hidden lg:flex lg:w-5/12 xl:w-1/2 relative overflow-hidden" style="background: linear-gradient(135deg, var(--color-school-green) 0%, var(--color-school-green-light) 100%);">
       <div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(circle at 2px 2px, white 1px, transparent 0); background-size: 24px 24px;"></div>
@@ -45,17 +45,17 @@
     </div>
 
     <!-- Right login panel -->
-    <div class="flex-1 flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
-      <div class="w-full max-w-md">
+    <div class="login-panel min-w-0 flex-1 flex items-center justify-center py-6 sm:py-12 px-4 sm:px-6 lg:px-8">
+      <div class="w-full min-w-0 max-w-md">
         <!-- Mobile header -->
-        <div class="lg:hidden text-center mb-8">
+        <div class="lg:hidden text-center mb-5 sm:mb-8">
           <img src="/The_Colegio_de_Montalban_Seal.png" alt="Colegio de Montalban" class="w-14 h-14 mx-auto mb-3 object-contain" />
           <h1 class="text-2xl font-bold" style="font-family: var(--font-heading); color: var(--color-school-green);">Colegio de Montalban</h1>
-          <p class="text-xs font-semibold tracking-wide uppercase mt-1" style="color: var(--color-school-gold);">Career Recommendation System</p>
+          <p class="text-xs font-semibold tracking-wide uppercase mt-1" style="color: #8a6b12;">Career Recommendation System</p>
           <p class="text-sm text-gray-500 mt-1">Please sign in to continue</p>
         </div>
 
-        <div class="school-card p-8">
+        <div class="school-card p-5 sm:p-8">
           <div v-if="!otpChallenge">
           <div class="flex items-center space-x-2 mb-6">
             <div class="h-px flex-1 bg-gray-200"></div>
@@ -107,7 +107,7 @@
           <div class="school-divider text-xs text-gray-500 my-6">Or continue with Google</div>
 
           <div v-if="googleClientId">
-            <div ref="googleButton" class="flex justify-center min-h-[44px]"></div>
+            <div ref="googleButton" class="w-full min-w-0 flex justify-center min-h-[44px]"></div>
             <p class="mt-3 text-center text-xs text-gray-500">Your first Google sign-in creates one student account automatically.</p>
           </div>
           <div v-else class="p-3 border rounded-md text-sm text-center" style="background:#fef2f2;border-color:#fecaca;color:#991b1b;">
@@ -161,7 +161,7 @@
 </template>
 
 <script setup>
-import { nextTick, onMounted, ref } from 'vue';
+import { nextTick, onBeforeUnmount, onMounted, ref } from 'vue';
 import { useRouter } from 'vue-router';
 import { useAuthStore } from '../stores/authStore';
 import OtpVerification from '../components/OtpVerification.vue';
@@ -176,6 +176,8 @@ const errorMessage = ref('');
 const otpStatusMessage = ref('');
 const otpChallenge = ref(null);
 const googleButton = ref(null);
+let googleButtonObserver;
+let googleButtonWidth = 0;
 const googleClientId = import.meta.env.VITE_GOOGLE_CLIENT_ID || '';
 
 const loginForm = ref({
@@ -289,6 +291,9 @@ const handleGoogleCredential = async ({ credential }) => {
 
 const renderGoogleButton = () => {
   if (!googleClientId || !window.google?.accounts?.id || !googleButton.value) return;
+  const width = Math.min(360, Math.floor(googleButton.value.getBoundingClientRect().width));
+  if (width <= 0) return;
+  googleButtonWidth = width;
   window.google.accounts.id.initialize({
     client_id: googleClientId,
     callback: handleGoogleCredential,
@@ -296,13 +301,18 @@ const renderGoogleButton = () => {
   window.google.accounts.id.renderButton(googleButton.value, {
     theme: 'outline',
     size: 'large',
-    width: 360,
+    width,
     text: 'signin_with',
   });
 };
 
 onMounted(() => {
   if (!googleClientId) return;
+  googleButtonObserver = new ResizeObserver(() => {
+    const width = Math.min(360, Math.floor(googleButton.value?.getBoundingClientRect().width || 0));
+    if (width > 0 && width !== googleButtonWidth) renderGoogleButton();
+  });
+  if (googleButton.value) googleButtonObserver.observe(googleButton.value);
   const existingScript = document.querySelector('script[data-google-identity]');
   if (existingScript) {
     if (window.google?.accounts?.id) renderGoogleButton();
@@ -321,4 +331,13 @@ onMounted(() => {
   }, { once: true });
   document.head.appendChild(script);
 });
+onBeforeUnmount(() => googleButtonObserver?.disconnect());
 </script>
+
+<style scoped>
+.login-page { min-height: calc(100dvh - 114px); }
+@media (max-width: 700px) {
+  .login-page { min-height: calc(100dvh - 103px); }
+  .login-panel { align-items: flex-start; padding-bottom: calc(5rem + env(safe-area-inset-bottom)); }
+}
+</style>
